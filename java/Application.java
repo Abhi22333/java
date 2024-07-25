@@ -1,6 +1,12 @@
-class Application{
-	public static void run(){
-		System.out.println("coding java");
-		Internet.stream();
+class Application
+{
+	String name;
+	String logo;
+	long apppassword;
+	int star;
+	
+	public Application()
+	{
+		System.out.println("created Application");
 	}
 }

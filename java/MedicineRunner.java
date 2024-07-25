@@ -1,24 +1,24 @@
-class MedicineRunner{
-	public static void main (String[] args){
-		System.out.println("start main in MedicineRunner");
-		if (args.length==4)
-		{
-			String name=args[0];
-			String manufacture=args[1];
-			String price=args[2];
-			String quantity=args[3];
-			
-			long convertedmanufacture=Long.parseLong(manufacture);
-			float convertedprice=Float.parseFloat(price);
-			int convertedquantity=Integer.parseInt(quantity);
-			
-			Medicine.medicineinfo(name,convertedmanufacture,convertedprice,convertedquantity);	
-		}
-		else
-		{
-			System.out.println("3 args are required");
-		}
-		
-		System.out.println("end main in MedicineRunner");
-	}
-}
+class MedicineRunner
+{
+  public static void main(String[] args)
+  {
+	  System.out.print("Start main in MedicineRunner ");
+	  
+	  Medicine medicine=new Medicine();
+	  double cost=medicine.cost;
+	  String name=medicine.name;
+	  int quantity=medicine.quantity;
+	  System.out.println("Medicine cost:"+ cost);
+	  System.out.println("Medicine name:"+name);
+	  System.out.println("Medicine quantity:"+quantity);
+	  
+	  medicine.cost=5;
+	  medicine.name="Dollo";
+	  medicine.quantity=10;
+	  System.out.println("Medicine cost updated:"+medicine.cost);
+	  System.out.println("Medicine name updated:"+medicine.name);
+	  System.out.println("Medicine quantity updated:"+medicine.quantity);
+	  
+	   System.out.print("end main in MedicineRunner");
+  }
+ }

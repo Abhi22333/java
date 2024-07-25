@@ -1,12 +1,12 @@
-class Juice
+class Food
 {
 	double cost;
 	String name;
 	String colour;
 	int quantity;
 	
-	public Juice()
+	public Food()
 	{
-		System.out.println("created Juice");
+		System.out.println("created Food");
 	}
 }

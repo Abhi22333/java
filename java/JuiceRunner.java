@@ -1,22 +1,28 @@
-class JuiceRunner{
-	public static void main (String[] args){
-		System.out.println("start main in JuiceRunner");
-		if (args.length==5)
-		{
-			String name=args[0];
-			String brand=args[1];
-			String flavour=args[2];
-			String price=args[3];
-			String quantity=args[4];
-			
-			float convertedprice=Float.parseFloat(price);
-			int convertedquantity=Integer.parseInt(quantity);
-			Juice.information(name,brand,flavour,convertedprice,convertedquantity);
-		}
-		else{
-			System.out.println("4 argus are required");
-			System.out.println("end main in JuiceRunner");
-			
-		}
-	}
-}
+class JuiceRunner
+{
+  public static void main(String[] args)
+  {
+	  System.out.print("Start main in JuiceRunner ");
+	  
+	  Juice juice=new Juice();
+	  double cost=juice.cost;
+	  String name=juice.name;
+	  String colour=juice.colour;
+	  int quantity=juice.quantity;
+	  System.out.println("Juice cost:"+ cost);
+	  System.out.println("Juice name:"+name);
+	  System.out.println("Juice colour:"+colour);
+	  System.out.println("Juice quantity:"+quantity);
+	  
+	  juice.cost=100;
+	  juice.name="Mango";
+	  juice.colour="orange";
+	  juice.quantity=2;
+	  System.out.println("Juice cost updated:"+juice.cost);
+	  System.out.println("Juice name updated:"+juice.name);
+	  System.out.println("Juice colour updated:"+juice.colour);
+	  System.out.println("Juice quantity updated:"+juice.quantity);
+	  
+	   System.out.print("end main in JuiceRunner");
+  }
+ }
