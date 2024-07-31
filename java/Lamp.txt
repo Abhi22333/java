@@ -1,0 +1,13 @@
+class Lamp{
+	
+	String size;
+	double cost;
+	
+	Lamp(String costLocal,String sizeLocal)
+	{
+		cost=costLocal;
+		size=sizeLocal;
+		System.out.println("Created Lamp using cost,size");
+	}
+	
+}
