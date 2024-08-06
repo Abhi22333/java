@@ -8,8 +8,8 @@ class FishRunner
 		
 		
 		Fish fish=new Fish("Anjal","Medium");
-		/*System.out.println("Fish name:"+fish.name);
-		System.out.println("Fish size:"+fish.size);*/
+		System.out.println("Fish name:"+fish.name);
+		System.out.println("Fish size:"+fish.size);
 		
 		Fish fish1=new Fish("Silver","Small");
 		System.out.println("Fish1 name:"+fish1.name);

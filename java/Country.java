@@ -1,39 +1,25 @@
-class Country
-{
-	public static String code(int code )
-	{
-		System.out.println("running the countrycode");
+class Country{
 	
-		if(code==91)
-		{
-			return "India";
-		}
-		else if(code==61)
-		{
-			return"Australia";
-		}
-		else if(code==55)
-		{
-		String countryName="maldives";
-            return countryName;
-
-		}
-		{
-			return"Brazil";
-		}
-		else if(code==44)
-		{
-			return "England";
+	String name;
+	String continent;
+	State state=new State("kannada");
+	
+	
+	public Country(String name,String continent){
 		
-		}
-		else if(code==86)
-		{
-			return"China";
-		}
 		
-	       System.out.println("Not found");
-		   return"Not found";
-		
+		this.name=name;
+		this.continent=continent;
 	}
+	
+	public void show()
+	{
+		
+		System.out.println("country name:"+name);
+		System.out.println("country continent:"+continent);
+		state.show();
+	}
+	
+	
 	
 }

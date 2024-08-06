@@ -64,3 +64,17 @@ public class SimCardRunner {
     }
 }
 }
+//constructor
+
+//1. Special non-static Method
+
+//2. Init IV during creation
+
+//3. used with new keyword
+
+//4. does not have return type 
+// 5. Access-sepcifer ClassName
+//6.its explicite
+//7.we can use N number of parameter
+
+1
