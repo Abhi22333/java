@@ -24,7 +24,7 @@ public class CourseRepositoryImp implements CourseRepository {
 			connection = DriverManager.getConnection(CourseConnection.URL.getValue(),
 					CourseConnection.USERNAME.getValue(), CourseConnection.PASSWORD.getValue());
 			PreparedStatement preparedStatement = connection
-					.prepareStatement("insert into institue_table values(?,?,?,?,?,?,?)");
+					.prepareStatement("insert into course values(?,?,?,?,?,?,?)");
 			preparedStatement.setInt(1, courseDTO.getId());
 			preparedStatement.setString(2, courseDTO.getName());
 			preparedStatement.setString(3, courseDTO.getEmail());
@@ -62,7 +62,7 @@ public class CourseRepositoryImp implements CourseRepository {
 			connection = DriverManager.getConnection(CourseConnection.URL.getValue(),
 					CourseConnection.USERNAME.getValue(), CourseConnection.PASSWORD.getValue());
 			PreparedStatement preparedStatement = connection
-					.prepareStatement("select name,email from institue_table where number=?");
+					.prepareStatement("select name,email from course where number=?");
 			preparedStatement.setString(1, Phone);
 			ResultSet resultSet1 = preparedStatement.executeQuery();
 

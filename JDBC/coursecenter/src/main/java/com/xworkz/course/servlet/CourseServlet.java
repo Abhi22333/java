@@ -16,7 +16,7 @@ import com.xworkz.course.service.CourseService;
 public class CourseServlet extends HttpServlet {
 
 	public CourseServlet() {
-		System.out.println("running no args InstituteServlet const");
+		System.out.println("running no args courseServlet const");
 	}
 
 	int id = 1;
