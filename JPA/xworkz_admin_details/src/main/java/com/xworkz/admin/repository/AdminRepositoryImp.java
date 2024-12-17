@@ -1,5 +1,6 @@
 package com.xworkz.admin.repository;
 
+import com.xworkz.admin.dto.SigninDTO;
 import com.xworkz.admin.entity.AdminEntity;
 import org.springframework.stereotype.Repository;
 
@@ -32,5 +33,28 @@ public class AdminRepositoryImp implements AdminRepository{
 
 
         return false;
+    }
+
+    @Override
+    public String getPassword(SigninDTO signinDTO) {
+        String string=null;
+        EntityManagerFactory emf= Persistence.createEntityManagerFactory("com.xworkz");
+        EntityManager em =emf.createEntityManager();
+        EntityTransaction et=em.getTransaction();
+
+        try {
+            et.begin();
+            Object object=em.createNamedQuery("getPasswordName").setParameter("setName",signinDTO.getName()).getSingleResult();
+            string=(String)object;
+            et.commit();
+
+        } catch (Exception e) {
+            if (et.isActive())
+                et.rollback();
+        } finally {
+            em.close();
+            emf.close();
+        }
+        return string;
     }
 }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,8 +37,8 @@
     <div class="container-fluid">
         <img class="logo" src="https://avatars.githubusercontent.com/u/48981565?v=4">
         <div class="navbar-header">
-            <a class="navbar-brand" href="Login.jsp">login</a>
-
+            <a class="navbar-brand" href="signup.jsp">signup</a>
+ <a class="navbar-brand" href="signin.jsp">signin</a>
         </div>
     </div>
 </nav>

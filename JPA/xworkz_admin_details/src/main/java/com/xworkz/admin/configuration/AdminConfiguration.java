@@ -13,6 +13,4 @@ public class AdminConfiguration {
     AdminConfiguration(){
         System.out.println("running AdminConfiguration");
     }
-
-
 }
